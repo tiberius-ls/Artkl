@@ -1,0 +1,57 @@
+$navbar-default-bg: black;
+@import "bootstrap/scss/bootstrap";
+
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.jumbotron-fluid {
+    text-align: center;
+}
+
+.jumbotron-fluid {
+    background-image: asset-url('body.png');
+    background-size: cover;
+    height: 700px;
+}
+
+
+.display-3 {
+    background: whitesmoke;
+    border-radius: 15px 50px 30px;
+    padding: 20px; 
+    width: 1100px;
+    height: 100px;
+    font-family: Monaco; 
+}
+
+footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #777;
+}
+
+footer a:hover {
+    color: #222;
+}
+
+footer small {
+    float: left;
+}
+
+footer ul {
+    float:right;
+    list-style: none;    
+}
