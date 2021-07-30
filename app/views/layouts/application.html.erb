@@ -12,7 +12,9 @@
 
   <body>
     <%= render 'layouts/nav' %>
-    <%= render 'layouts/messages' %>
+    <div class="row">
+      <%= render 'layouts/messages' %>
+    </div>
     <div class="container">
       <%= yield %>
     </div>
