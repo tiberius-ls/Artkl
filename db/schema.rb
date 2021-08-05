@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2021_08_04_140029) do
+ActiveRecord::Schema.define(version: 2021_08_04_160652) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -50,9 +49,6 @@ ActiveRecord::Schema.define(version: 2021_08_04_140029) do
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
-=======
-ActiveRecord::Schema.define(version: 2021_08_04_160652) do
->>>>>>> 89bef9b64ca621f965360dbc0bb84a450f200b32
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -62,10 +58,6 @@ ActiveRecord::Schema.define(version: 2021_08_04_160652) do
     t.integer "views", default: 0
   end
 
-<<<<<<< HEAD
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-=======
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email"
@@ -73,5 +65,6 @@ ActiveRecord::Schema.define(version: 2021_08_04_160652) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
->>>>>>> 89bef9b64ca621f965360dbc0bb84a450f200b32
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
 end
