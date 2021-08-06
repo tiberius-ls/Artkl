@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
     end
 
     def index
-        @articles = Article.all
+        @articles = Article.all.with_rich_text_description
     end
 
     def create
@@ -30,7 +30,9 @@ class ArticlesController < ApplicationController
         end
     end
 
-    def show 
+    def show
+        @article.views = @article.views + 1
+        @article.save 
     end
 
     def destroy
@@ -44,6 +46,6 @@ class ArticlesController < ApplicationController
             @article = Article.find(params[:id]) 
         end
       def article_params
-          params.require(:article).permit(:title, :description)
+          params.require(:article).permit(:title,:views, :description)
       end
 end
