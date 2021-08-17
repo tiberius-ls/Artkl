@@ -1,20 +1,10 @@
-<h1>list all article</h1>
+<h1 class = "center" align = "center">Articles</h1>
 <p>
-    <%= link_to "New Article", new_article_path %>
+    <%= link_to "New Article", new_article_path, class: "btn btn-secondary", style: "color: aqua;" %>
 </p>
-<table>
-    <tr>
-        <th>Title</th>
-        <th>Description</th>
-    </tr>
 
-    <% @articles.each do |article| %>
-    <tr>
-        <td><%= article.title %></td>
-        <td><%= article.description %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Show', article_path(article) %></td>
-        <td><%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you Sure?"} %></td>
-    </tr>
-    <% end %>
-</table>
+<%= render 'article', obj: @articles %>
+
+<div align="center">
+    <%= will_paginate %>
+</div>

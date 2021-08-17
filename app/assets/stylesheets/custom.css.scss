@@ -23,6 +23,11 @@ $navbar-default-bg: black;
     font-family: Monaco; 
 }
 
+.list {
+     list-style: none;
+     padding-left: 0;
+}
+
 footer {
     margin-top: 45px;
     padding-top: 5px;
@@ -48,3 +53,23 @@ footer ul li {
     margin-left: 15px;
 }
 
+.views {
+    float: right;
+}
+
+.center {
+    font-weight: 200;
+    font-family:'Courier New', Courier, monospace;
+    line-height: normal;
+    padding-top: 30px;
+}
+
+.h-100 {
+    padding-left: 100px;
+    padding-bottom: 100px;
+    padding-right: 100px;
+}
+
+article-listing {
+    border-radius: 1000px;
+}

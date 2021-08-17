@@ -1,0 +1,24 @@
+<main class="container">
+  <% obj.each do |article| %>
+<div class="row mb-2" >
+  <div class="article-listing">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0"><%= article.title %></h3>
+          <div class="mb-1 text-muted">
+            <p><%= time_ago_in_words(article.created_at) %> ago, by <%= article.user.username if article.user%></p>
+          </div>
+          <p class="card-text mb-auto"><%= article.description %></p>
+          <%= link_to 'Continue reading', article_path(article), class: "stretched-link btn btn-xs btn-"%>
+          <% if logged_in? && current_user == article.user %>
+            <%= link_to 'Edit', edit_article_path(article), class: "btn btn-xs btn-warning" %>
+            <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you Sure?"}, class: "btn btn-xs btn-danger" %>
+          <% end %>
+        </div>
+      </div>
+    </div>  
+  </div>
+</div>
+  <% end %>
+</main>

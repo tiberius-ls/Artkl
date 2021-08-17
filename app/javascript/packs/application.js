@@ -15,3 +15,12 @@ ActiveStorage.start()
 
 require("trix")
 require("@rails/actiontext")
+
+(function () {
+    'use strict'
+  
+    document.querySelector('[data-bs-toggle="dropdown"]').addEventListener('click', function () {
+      document.querySelector('.dropdown-menu').classList.toggle('open')
+    })
+  })()
+  

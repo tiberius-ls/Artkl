@@ -1,11 +1,15 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-3">ARTKL</h1>
-        <p class="lead">Jumbo helper text</p>
+        <p class="lead">Welcome to your bloggin' site</p>
         <br>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg btn-dark" href="Jumbo action link" role="button">Jumbo action name</a>
-        </p>
+        <% if logged_in? %>
+        
+        <% else %>
+            <p class="lead">
+                <%= link_to "Sign up", signup_path, class: "btn btn-primary btn-lg btn-dark" %>
+            </p>
+        <% end %>
     </div>
 </div>
 

@@ -14,4 +14,61 @@
  *= require_self
  */
  @import "./actiontext.scss";
+
+ main {
+    display: block;
+}
  
+html,
+body {
+  overflow-x: hidden; 
+}
+
+body {
+  padding-top: 0px;
+  padding: 0px;
+background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.jpg'); 
+font-family: var(--bs-font-sans-serif);
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #212529;
+-webkit-text-size-adjust: 100%;
+-webkit-tap-highlight-color: transparent;
+box-sizing: border-box;
+flex-grow: 1;
+flex-basis: auto;
+}
+
+
+@media (max-width: 8.98px) {
+  .container-fluid{
+    position: fixed;
+    top: 50px; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+  }
+  .navbar-collapse.open {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
+
+.nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+
+.active {
+  font-weight: 500;
+  color: #343a40;
+}

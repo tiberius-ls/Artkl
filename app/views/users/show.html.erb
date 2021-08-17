@@ -1,0 +1,13 @@
+<h1 class="profile" align= "center">Welcome to <%= @user.username %>'s page</h1>
+<br>
+<div class="row">
+    <div class="d-flex justify-content-center align-items-center h-10">
+        <%= gravatar_for @user, size: 150 %>
+    </div>
+</div>
+<%= link_to 'Edit your profile', edit_user_path(@user), class: "btn btn-secondary",  style: "float: right; color: aqua;" %>
+<h4 align="center"><%= @user.username %>'s articles</h4>
+<%= render 'articles/article', obj: @user.articles %>
+<div class="center">
+    <%= will_paginate @user_articles %>
+</div>

@@ -1,19 +1,24 @@
-<h1>Show Article</h1>
-<link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
-<p>
-    Title: <%= @article.title %>
-</p>
+<article class="blog-post">
+    <h2 class="blog-post-title"><%= @article.title %></h2>
+    <p class="blog-post-meta"><%= time_ago_in_words(@article.created_at) %> ago, Last updated <%= time_ago_in_words(@article.updated_at) %> ago %></p>
+    <p class="views">
+        <strong>Views:</strong>
+        <%= @article.views %>
+    </p>
+     
+    <div class="well col-xs-8 col-xs-offset-2">
+        <h4 class="center">
+            <hr>
+            <%= @article.description %>
+        </h4>
+    </div>
+    <%= link_to "Edit Article", edit_article_path(@article) %> |
+    <%= link_to "Back to Articles", articles_path %> |
+    <%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you Sure?"} %>
+</article>
 
-<p>
-    <strong>Views:</strong>
-    <%= @article.views %>
-</p>
 
-<p>
-    Description: <%= @article.description %>
-</p>
-
-<%= link_to "Edit Article", edit_article_path(@article) %> |
-<%= link_to "Back to Articles", articles_path %> |
-<%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you Sure?"} %>
 <script src="https://vjs.zencdn.net/7.8.3/video.js"></script>
+
+
+

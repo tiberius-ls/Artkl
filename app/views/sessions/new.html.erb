@@ -1,0 +1,31 @@
+<h1 align="center">Log In</h1>
+<div class="row d-flex justify-content-center align-items-center h-100">
+  <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+    <div class="card" style="border-radius: 50px;">
+      <div class="card-body p-5">
+        <form>
+          <%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
+          <div class="form-outline mb-4">
+            <%= f.email_field :email, class: "form-control form-control-lg rounded-pill", placeholder: "Enter email", type: "email", id: "form3Example3cg", autofocus: true%> 
+            <label class="form-label" for="form3Example3cg"></label>
+          </div>
+
+          <div class="form-outline mb-4">
+              <%= f.password_field :password, class: "form-control form-control-lg rounded-pill", placeholder: "Enter password", type: "password", id: "form3Example4cg"%>
+            <label class="form-label" for="form3Example4cg"></label>
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <%= f.submit"Log in", class: "btn btn-success btn-block btn-lg gradient-custom-4 text-body" %>
+          </div>
+
+          <p class="text-center text-muted mt-5 mb-0">New here? Create account<u><%= link_to 'Sign Up', signup_path, class:"fw-bold text-body" %></u></p>
+          <br>
+          <p class="text-center text-muted mt-5 mb-0"><%= link_to 'Forgot your password?', password_reset_path, class: "fw-bold text-body" %></p>
+
+        </form>
+        <% end %> 
+      </div>
+    </div>
+  </div>
+</div>

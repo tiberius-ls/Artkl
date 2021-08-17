@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_05_135504) do
+ActiveRecord::Schema.define(version: 2021_08_11_154241) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -55,11 +55,8 @@ ActiveRecord::Schema.define(version: 2021_08_05_135504) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-<<<<<<< HEAD
     t.integer "user_id"
-=======
     t.integer "views", default: 0
->>>>>>> 04cf7e3de885fa3a257af573f503d1e5ccaa7f36
   end
 
   create_table "users", force: :cascade do |t|
@@ -67,6 +64,7 @@ ActiveRecord::Schema.define(version: 2021_08_05_135504) do
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
